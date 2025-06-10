@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFDAC's Red Alert on Dove: My Journey to Understand the Ingredients in A Soap Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .accent-bg-1 { background-color: #FF5733; }
+        .accent-text-1 { color: #FF5733; }
+        .accent-bg-2 { background-color: #33FF57; }
+        .accent-text-2 { color: #33FF57; }
+        .accent-bg-3 { background-color: #3357FF; }
+        .accent-text-3 { color: #3357FF; }
+        .accent-bg-4 { background-color: #FF33E9; }
+        .accent-text-4 { color: #FF33E9; }
+
+        .gradient-bar {
+            height: 30px;
+            background: linear-gradient(to right, #33FF57 0%, #FFC107 33%, #FF5733 66%, #FF33E9 100%);
+            border-radius: 15px;
+            position: relative;
+        }
+        .gradient-label {
+            position: absolute;
+            top: -25px;
+            font-size: 0.8em;
+            color: #6b7280;
+        }
+        .gradient-label.low { left: 0%; transform: translateX(-50%); }
+        .gradient-label.moderate { left: 40%; transform: translateX(-50%); }
+        .gradient-label.high { right: 0%; transform: translateX(50%); }
+
+        .accordion-header {
+            cursor: pointer;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
+
+        <header class="text-center mb-12 py-8 bg-white rounded-lg shadow-md">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">NAFDAC's Red Alert on Dove: My Journey to Understand the Ingredients in A Soap Bar</h1>
+            <p class="text-lg md:text-xl text-gray-600 italic">When a simple morning shower turned into a chemical quest.</p>
+        </header>
+
+        <main>
+            <section id="introduction" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 accent-text-3">I. The Morning Jolt</h2>
+                <p class="mb-4 text-gray-700">It was a peaceful Tuesday morning after a long weekend, I thought about all the work for the day but first, I needed to shower. My choice of soap? Dove, of course. The thing is for years, my wife has 'encouraged' me to use her personal care products. She often said things like, 'Honey, try this, it's so good for your skin!' or 'Oh, looks like we're out of your soap, but there's plenty of Dove!' Because of her, our bathroom cabinet slowly filled with her favorite brands. Dove literally became 'our' soap in our marriage. I won't lie <em>it dey show for skin though</em>.</p>
+                <p class="mb-4 text-gray-700">But that morning, the calm was broken. I picked up my phone, and the first thing I saw was an Instagram video talking about the NAFDAC and Dove red alert. I was shocked. Dove? Known for being gentle? It felt wrong. The warning mentioned a chemical to watch out for: <strong class="font-semibold">Butylphenyl Methylpropional (BMHCA) Contamination.</strong></p>
+                <p class="text-gray-700">"Butylphenyl Methylpropional?!" I yelled inwardly because It was hard to say. But the serious warning made me jump out of bed fast. I grabbed three packs of our Dove soap. My eyes quickly searched for that long name. I felt relieved—it wasn't there! But this relief quickly led to many questions. What were these other chemical names? How do I know which are harmful and which are safe? So I started to research the soap I was using.</p>
+            </section>
+
+            <section id="nafdac-alert" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 accent-text-3">II. Decoding the Red Alert: What is BMHCA Anyway?</h2>
+                <p class="mb-4 text-gray-700">The NAFDAC alert wasn't just a casual heads-up; it was a serious warning about <strong class="font-semibold">Butylphenyl Methylpropional (BMHCA)</strong>. This synthetic fragrance ingredient, often known by its trade name Lilial, has raised significant red flags globally due to its potential as an allergen and, more concerningly, its classification as a potential reproductive toxicant.</p>
+                <p class="mb-4 text-gray-700">While my particular Dove products thankfully didn't contain this specific chemical, the incident served as a potent reminder: if one problematic chemical can trigger such a widespread alert, what about the countless other complex names lurking on our product labels that we know nothing about? It’s a wake-up call to look beyond familiar branding.</p>
+                <div class="flex justify-center mt-6">
+                    <button id="showBMHCAModal" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+                        Learn More About BMHCA
+                    </button>
+                </div>
+
+                <div id="bmhcaModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h3 class="text-2xl font-bold mb-3 accent-text-1">Butylphenyl Methylpropional (BMHCA)</h3>
+                        <p class="text-gray-700 mb-4"><strong>What it is:</strong> A synthetic fragrance ingredient, also known as Lilial.</p>
+                        <p class="text-gray-700 mb-4"><strong>Why the Red Flag:</strong> It has been banned in the European Union due to its classification as a potential reproductive toxicant and a known allergen.</p>
+                        <p class="text-gray-700">NAFDAC's alert highlighted its contamination in some cosmetic products, reinforcing the need for strict ingredient scrutiny.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="deep-dive" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 accent-text-3">III. My Personal Deep Dive: Unraveling the Ingredient List</h2>
+                <p class="mb-4 text-gray-700">That initial scare kickstarted my mission: to become an expert in my soap. I meticulously researched each ingredient, assigning a "Harm Score" from 1 to 10. Think of it like this:</p>
+                <ul class="list-disc list-inside text-gray-700 mb-6">
+                    <li><strong class="accent-text-2">1-3: Very Low to Low Concern</strong> (Generally safe, minimal to rare issues).</li>
+                    <li><strong class="accent-text-1">4-6: Moderate Concern</strong> (Potential for irritation/allergy in some, minor environmental notes).</li>
+                    <li><strong class="accent-text-4">7-8: High Concern</strong> (More frequent/severe allergic potential, evidence of systemic effects).</li>
+                    <li><strong class="accent-text-1">9-10: Very High Concern</strong> (Strong evidence of toxicity, severe reactions, often restricted).</li>
+                </ul>
+                <p class="mb-4 text-gray-700">This scale became my compass through the jungle of chemical names.</p>
+
+                <div class="relative w-full mt-6 mb-2"> <div class="gradient-bar"></div>
+                </div>
+
+                <div class="flex justify-between text-sm text-gray-700 w-full">
+                    <span>Very Low Concern (1-2)</span>
+                    <span>Moderate Concern (4-6)</span>
+                    <span>High Concern (7-8)</span>
+                </div>
+            </section>
+
+            <section id="category-breakdown" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-6 accent-text-3 text-center">IV. Inside Your Soap Bar: A Category-by-Category Breakdown</h2>
+                <p class="mb-8 text-gray-700 text-center max-w-2xl mx-auto">Your soap isn't just one thing; it's a symphony of chemicals, each playing a vital role. Let's pull back the curtain on these unsung heroes (and a few villains) of your daily scrub.</p>
+
+                <div id="accordion-container"></div>
+            </section>
+
+            <section id="revelations" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 accent-text-3">V. The Good, The Bad, and The "Why?": My Surprising Revelations</h2>
+                <p class="mb-4 text-gray-700">My deep dive into soap ingredients was a true eye-opener. While many components are genuinely beneficial, some common ones hide surprising truths.</p>
+                <h3 class="text-xl font-semibold mb-3 accent-text-1">Surprise 1: "Natural" Isn't Always "Safe"</h3>
+                <p class="mb-4 text-gray-700">It's easy to assume that if an ingredient comes from a plant, it's automatically harmless. Not so fast! Take <strong class="font-semibold">Limonene</strong> and <strong class="font-semibold">Linalool</strong>. These are derived from citrus and flowers, giving your soap that lovely fresh scent. But when exposed to air, they can oxidize and become potent allergens, triggering skin reactions in sensitive individuals. It's a classic case of 'good intentions, tricky execution'!</p>
+                <h3 class="text-xl font-semibold mb-3 accent-text-1">Surprise 2: The Environmental Footprint in Your Lather</h3>
+                <p class="mb-4 text-gray-700">Ingredients like <strong class="font-semibold">Sodium Palmate</strong> and <strong class="font-semibold">Sodium Palm Kernelate</strong> are common soap bases, generally safe for your skin. The surprising part? Their sourcing. Unsustainable produced palm oil can contribute to deforestation and habitat destruction. So, while your skin might be fine, the planet might be silently protesting. This makes checking for certifications like RSPO crucial.</p>
+                <h3 class="text-xl font-semibold mb-3 accent-text-1">Surprise 3: Hidden Carcinogens & Hormonal Mimicry</h3>
+                <p class="mb-4 text-gray-700">This was perhaps the most unsettling discovery. Some synthetic colorants, like <strong class="font-semibold">FD&C Yellow 6 (CI 15985)</strong> and <strong class="font-semibold">FD&C Blue 1 (CI 42090)</strong>, aren't just about allergies. Research has linked them to neurotoxicity, endocrine disruption (mimicking hormones!), and even trace carcinogens. Imagine: a color added for aesthetics potentially carrying such heavy hidden risks. And the cherry on top? Some dyes, like FD&C Red 4, were actually *banned* for food use but are still permitted in cosmetics!</p>
+
+                <div class="flex justify-center mt-8">
+                    <button id="showQuiz" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+                        Test Your Soap IQ!
+                    </button>
+                </div>
+
+                <div id="quizSection" class="mt-8 p-6 bg-gray-50 rounded-lg shadow-inner hidden">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Quiz Time!</h3>
+                    <div id="quizQuestion" class="mb-4 text-lg font-medium text-gray-800"></div>
+                    <div id="quizOptions" class="space-y-3"></div>
+                    <button id="nextQuizBtn" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Next Question</button>
+                    <div id="quizFeedback" class="mt-4 text-center font-semibold"></div>
+                </div>
+            </section>
+
+            <section id="recommendations" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-6 accent-text-3 text-center">VI. Empowering Your Lather: What You Can Do</h2>
+                <p class="mb-6 text-gray-700 text-center max-w-2xl mx-auto">This isn't about ditching your favorite products overnight, but about making informed choices. Here's your actionable guide:</p>
+
+                <div id="actionableChecklist" class="space-y-4">
+                    <label class="flex items-center text-lg text-gray-700 cursor-pointer p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out shadow-sm">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded mr-3">
+                        <span class="font-semibold">Prioritize Transparency:</span> Look for fragrance-free products or brands that disclose ALL fragrance components. No more "black boxes"!
+                    </label>
+                    <label class="flex items-center text-lg text-gray-700 cursor-pointer p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out shadow-sm">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded mr-3">
+                        <span class="font-semibold">The Power of the Patch Test:</span> Before committing to a new product, dab a small amount on your inner forearm for 24-48 hours. Your skin will tell you if it's happy!
+                    </label>
+                    <label class="flex items-center text-lg text-gray-700 cursor-pointer p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out shadow-sm">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded mr-3">
+                        <span class="font-semibold">Consider the Planet:</span> For ingredients like palm oil derivatives, look for certifications like RSPO (Roundtable on Sustainable Palm Oil). Your shower can be eco-friendly!
+                    </label>
+                    <label class="flex items-center text-lg text-gray-700 cursor-pointer p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out shadow-sm">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded mr-3">
+                        <span class="font-semibold">Be Mindful of Synthetic Dyes:</span> Especially if you or your family have sensitivities, consider avoiding products with aggressive synthetic colorants like FD&C Yellow 6 or Blue 1.
+                    </label>
+                    <label class="flex items-center text-lg text-gray-700 cursor-pointer p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out shadow-sm">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded mr-3">
+                        <span class="font-semibold">Remember: Concentration Matters:</span> An ingredient's "harm score" is a guide, not a definitive ban. Small amounts of certain chemicals are often safe in a well-formulated product. Stay informed, not alarmed.
+                    </label>
+                </div>
+            </section>
+
+            <section id="conclusion" class="mb-12 bg-white rounded-lg shadow-md p-6 text-center">
+                <h2 class="text-2xl font-bold mb-4 accent-text-3">VII. Conclusion: Your Skin, Your Choice</h2>
+                <p class="mb-4 text-gray-700">The NAFDAC alert on Dove might have been my unexpected entry into the world of cosmetic chemistry, but it's been an incredibly enlightening journey. Armed with this knowledge, you no longer have to blindly trust the labels. You can make choices that align with your personal health priorities and environmental values.</p>
+                <p class="text-gray-700 font-semibold italic">This isn't about fear; it's about empowerment.</p>
+                <p class="mt-6 text-lg text-gray-700">What hidden ingredients have you discovered in your own products? Share your insights in the comments below! Let's keep the conversation going.</p>
+                <p class="mt-4 text-xl font-bold accent-text-1">Stay soapy, stay safe!</p>
+                <p class="mt-8 text-lg font-bold text-gray-800">Want to dive deeper into the research?</p>
+                <a href="Soap Ingredient Harm Assessment_.pdf" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 mt-4">
+                    Download the Full Research Report
+                </a>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const ingredientCategories = [
+            {
+                name: 'Surfactants & Cleansing Agents',
+                function: 'The lather-makers, lifting dirt and oil.',
+                ingredients: [
+                    { name: 'Sodium Lauroyl Isethionate', score: 1, note: 'Very mild, safe, non-irritating, biodegradable surfactant.' },
+                    { name: 'Sodium Palmate', score: 3, note: 'Generally safe, but environmental concerns with palm oil sourcing.' },
+                    { name: 'Sodium Isethionate', score: 1, note: 'Mild, safe, biodegradable, maintains skin\'s moisture barrier.' },
+                    { name: 'Cocamidopropyl Betaine', score: 4, note: 'Generally mild, but a known contact allergen for some individuals.' },
+                    { name: 'Sodium Palm Kernelate', score: 3, note: 'Generally safe, but environmental concerns with palm oil sourcing.' },
+                    { name: 'Sodium C14-16 Olefin Sulfonate', score: 4, note: 'Milder than some sulfates, but irritant at high concentrations, sensitization from impurities.' }
+                ],
+                surprise: "Even 'gentle' surfactants like Cocamidopropyl Betaine can be contact allergens for some – it's not always about 'harshness'!"
+            },
+            {
+                name: 'Emollients & Skin Conditioners',
+                function: 'The skin-softeners and moisturizers.',
+                ingredients: [
+                    { name: 'Stearic Acid', score: 1, note: 'Natural fatty acid, widely considered safe, moisturizing.' },
+                    { name: 'Lauric Acid', score: 1, note: 'Natural fatty acid, safe, anti-bacterial, moisturizing.' },
+                    { name: 'Cocos Nucifera Fruit Extract', score: 1, note: 'Natural extract, safe, non-toxic, highly moisturizing, anti-inflammatory.' },
+                    { name: 'Butyrospermum Parkii (Shea) Oil', score: 1, note: 'Natural, highly beneficial, excellent skin compatibility, healing.' },
+                    { name: 'Sine Adipe Lac (Skimmed Milk Powder)', score: 1, note: 'Natural derivative, safe, low risk, provides moisturizing and soothing benefits.' }
+                ],
+                surprise: "These are often the 'good guys,' actively boosting skin health!"
+            },
+            {
+                name: 'Humectants',
+                function: 'The moisture magnets, keeping your skin hydrated.',
+                ingredients: [
+                    { name: 'Glycerin', score: 1, note: 'Essential, highly effective, overwhelmingly safe, skin barrier support.' },
+                    { name: 'Propylene Glycol', score: 4, note: 'Generally safe (GRAS), but known irritant/allergen for sensitive individuals.' },
+                    { name: 'Dipropylene Glycol', score: 3, note: 'Generally safe, non-toxic, but can cause contact dermatitis in some.' }
+                ],
+                surprise: "While Glycerin is universally loved, Propylene Glycol, a common humectant, can be an irritant for sensitive skin despite its GRAS status for most!"
+            },
+            {
+                name: 'Preservatives',
+                function: 'Keeping your soap fresh and free of microbes.',
+                ingredients: [
+                    { name: 'Sodium Benzoate', score: 6, note: 'Potential for benzene formation with Vitamin C, irritant/allergen.' },
+                    { name: 'Benzyl Alcohol', score: 6, note: 'Generally safe, but potential for irritation, allergic reactions, and severe toxicity (especially for infants).' }
+                ],
+                surprise: "Sodium Benzoate, seemingly benign, can interact with Vitamin C to form benzene – a known carcinogen! And Benzyl Alcohol, while common, has links to 'gasping syndrome' in infants, making it a high concern for pediatric products."
+            },
+            {
+                name: 'Fragrances',
+                function: 'Making your soap smell good (or not-so-good, if you\'re allergic!).',
+                ingredients: [
+                    { name: 'Fragrance (Parfum/Perfume)', score: 8, note: 'Black box: thousands of undisclosed chemicals, common allergen, endocrine disruptor, environmental pollutant.' },
+                    { name: 'Alpha-Isomethyl Ionone', score: 5, note: 'Known fragrance allergen, requires EU labeling above certain concentrations.' },
+                    { name: 'Benzyl Salicylate', score: 5, note: 'Known fragrance allergen (weak sensitizer), suspected endocrine disruptor.' },
+                    { name: 'Coumarin', score: 6, note: 'Known and significant allergen, formerly banned as a food additive.' },
+                    { name: 'Hexyl Cinnamal', score: 5, note: 'Common fragrance allergen, can trigger reactions in sensitive individuals.' },
+                    { name: 'Limonene', score: 5, note: 'Common fragrance allergen, oxidized forms are more sensitizing.' },
+                    { name: 'Linalool', score: 5, note: 'Common fragrance allergen, despite some beneficial properties.' }
+                ],
+                surprise: "The 'Black Box' secret: 'Fragrance' can hide thousands of chemicals, many known allergens and endocrine disruptors! Even 'natural' fragrance components like Limonene and Linalool can become highly sensitizing when exposed to air."
+            },
+            {
+                name: 'Colorants',
+                function: 'Giving your soap its appealing hue.',
+                ingredients: [
+                    { name: 'CI 15985 (FD&C Yellow 6)', score: 7, note: 'Synthetic dye with links to allergy, endocrine disruption, neurotoxicity, and trace carcinogens.' },
+                    { name: 'CI 19140 (FD&C Yellow 5)', score: 6, note: 'Synthetic dye, common allergen, particularly for asthmatics.' },
+                    { name: 'CI 17200 (D&C Red 33)', score: 5, note: 'Synthetic dye with documented allergenic potential.' },
+                    { name: 'CI 14700 (FD&C Red 4)', score: 6, note: 'Synthetic dye, formerly banned as food additive, specific FDA restrictions.' },
+                    { name: 'CI 42090 (FD&C Blue 1)', score: 7, note: 'Synthetic dye with links to neurotoxicity, developmental issues, and potential carcinogenicity.' },
+                    { name: 'Titanium Dioxide (CI 77891)', score: 3, note: 'Safe and beneficial topically. Inhalation of nanoparticles is the main concern, not relevant for bar soap.' }
+                ],
+                surprise: "Many synthetic dyes, even those 'approved,' have documented links to allergies, neurotoxicity, or even trace carcinogens. Some, like FD&C Red 4, were even *banned* as food additives but are allowed in cosmetics!"
+            },
+            {
+                name: 'Other Additives',
+                function: 'The supporting cast, from binders to stabilizers.',
+                ingredients: [
+                    { name: 'Water (Aqua/Eau)', score: 1, note: 'Essential, highly purified, and universally safe.' },
+                    { name: 'Sodium Stearate', score: 2, note: 'Generally safe, but can be drying/clog pores at high concentrations.' },
+                    { name: 'Sodium Chloride', score: 1, note: 'Common, safe, used for texture, stability, and pH regulation.' },
+                    { name: 'Zinc Oxide', score: 2, note: 'Safe for topical use, non-irritating. Inhalation of nanoparticles is main concern, not relevant for bar soap.' },
+                    { name: 'Tetrasodium EDTA', score: 5, note: 'Safe for topical use at low levels, but environmental persistence and manufacturing byproducts (dioxane) are concerns.' },
+                    { name: 'Tetrasodium Etidronate', score: 4, note: 'Safe for cosmetic use, but environmental persistence is a concern.' }
+                ],
+                surprise: "Chelating agents like Tetrasodium EDTA, while safe topically, raise environmental red flags due to non-biodegradability and can even increase the absorption of *other* chemicals into your skin!"
+            }
+        ];
+
+        const quizQuestions = [
+            {
+                question: "True or False: If an ingredient is 'natural' (like Limonene from citrus), it's automatically safe for everyone.",
+                options: ["True", "False"],
+                answer: "False",
+                explanation: "False! Natural ingredients like Limonene and Linalool can oxidize and become potent allergens, causing skin reactions in sensitive individuals."
+            },
+            {
+                question: "Which of these commonly used soap ingredients can potentially form a known carcinogen (benzene) when mixed with Vitamin C?",
+                options: ["Glycerin", "Sodium Benzoate", "Shea Oil", "Water"],
+                answer: "Sodium Benzoate",
+                explanation: "Sodium Benzoate, a common preservative, can form benzene (a known carcinogen) when combined with Vitamin C. A surprising detail!"
+            },
+            {
+                question: "Some synthetic colorants found in soap have been linked to:",
+                options: ["Only skin allergies", "Neurotoxicity and hormonal disruption", "Increased lather", "Faster drying time"],
+                answer: "Neurotoxicity and hormonal disruption",
+                explanation: "Beyond allergies, some synthetic dyes like FD&C Yellow 6 and Blue 1 have been linked to more serious concerns like neurotoxicity and endocrine disruption."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionContainer = document.getElementById('accordion-container');
+            ingredientCategories.forEach((category, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-gray-50 rounded-lg shadow-sm mb-4 overflow-hidden';
+
+                let headerClasses = 'accordion-header p-5 font-semibold flex justify-between items-center text-lg rounded-t-lg ';
+                if (index % 4 === 0) headerClasses += 'bg-gradient-to-r from-blue-100 to-blue-200 accent-text-3';
+                else if (index % 4 === 1) headerClasses += 'bg-gradient-to-r from-green-100 to-green-200 accent-text-2';
+                else if (index % 4 === 2) headerClasses += 'bg-gradient-to-r from-orange-100 to-orange-200 accent-text-1';
+                else headerClasses += 'bg-gradient-to-r from-purple-100 to-purple-200 accent-text-4';
+
+
+                card.innerHTML = `
+                    <div class="${headerClasses}">
+                        ${category.name}
+                        <span class="accordion-icon text-gray-600 transform transition-transform duration-300">▼</span>
+                    </div>
+                    <div class="accordion-content p-5 text-gray-700 bg-white border-t border-gray-200">
+                        <p class="mb-3"><strong class="font-semibold">Function:</strong> ${category.function}</p>
+                        <p class="mb-4 text-sm italic text-gray-600">Surprising Detail: ${category.surprise}</p>
+                        <h4 class="font-bold text-md mb-2 text-gray-800">Key Ingredients in Your Soap:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            ${category.ingredients.map(ing => `
+                                <li>
+                                    <span class="font-medium">${ing.name}</span>
+                                    (Score: <span class="font-bold ${ing.score <= 2 ? 'text-green-600' : ing.score <= 4 ? 'text-yellow-600' : ing.score <= 6 ? 'text-orange-600' : 'text-red-600'}">${ing.score}</span>) - ${ing.note}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+                accordionContainer.appendChild(card);
+            });
+
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+                    content.classList.toggle('active');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            const bmhcaModal = document.getElementById('bmhcaModal');
+            const showBMHCAModalBtn = document.getElementById('showBMHCAModal');
+            const closeBMHCAModalBtn = bmhcaModal.querySelector('.close-button');
+
+            showBMHCAModalBtn.addEventListener('click', () => {
+                bmhcaModal.style.display = 'flex';
+            });
+
+            closeBMHCAModalBtn.addEventListener('click', () => {
+                bmhcaModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === bmhcaModal) {
+                    bmhcaModal.style.display = 'none';
+                }
+            });
+
+            const showQuizBtn = document.getElementById('showQuiz');
+            const quizSection = document.getElementById('quizSection');
+            const quizQuestion = document.getElementById('quizQuestion');
+            const quizOptions = document.getElementById('quizOptions');
+            const nextQuizBtn = document.getElementById('nextQuizBtn');
+            const quizFeedback = document.getElementById('quizFeedback');
+
+            function loadQuestion() {
+                if (currentQuestionIndex < quizQuestions.length) {
+                    const q = quizQuestions[currentQuestionIndex];
+                    quizQuestion.innerText = q.question;
+                    quizOptions.innerHTML = '';
+                    quizFeedback.innerText = '';
+                    q.options.forEach(option => {
+                        const label = document.createElement('label');
+                        label.className = 'block bg-white p-3 rounded-md shadow-sm hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out';
+                        label.innerHTML = `
+                            <input type="radio" name="quizOption" value="${option}" class="mr-2">
+                            ${option}
+                        `;
+                        quizOptions.appendChild(label);
+                    });
+                    nextQuizBtn.innerText = "Next Question";
+                    nextQuizBtn.onclick = checkAnswer;
+                } else {
+                    quizQuestion.innerText = "You've completed the quiz!";
+                    quizOptions.innerHTML = '';
+                    nextQuizBtn.style.display = 'none';
+                    quizFeedback.innerText = "Thanks for playing!";
+                }
+            }
+
+            function checkAnswer() {
+                const selectedOption = document.querySelector('input[name="quizOption"]:checked');
+                if (selectedOption) {
+                    const q = quizQuestions[currentQuestionIndex];
+                    if (selectedOption.value === q.answer) {
+                        quizFeedback.className = 'mt-4 text-center font-semibold text-green-600';
+                        quizFeedback.innerText = `Correct! ${q.explanation}`;
+                    } else {
+                        quizFeedback.className = 'mt-4 text-center font-semibold text-red-600';
+                        quizFeedback.innerText = `Incorrect. The correct answer was "${q.answer}". ${q.explanation}`;
+                    }
+                    nextQuizBtn.innerText = "Continue";
+                    nextQuizBtn.onclick = () => {
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    };
+                } else {
+                    quizFeedback.className = 'mt-4 text-center font-semibold text-gray-600';
+                    quizFeedback.innerText = 'Please select an option.';
+                }
+            }
+
+            showQuizBtn.addEventListener('click', () => {
+                quizSection.classList.remove('hidden');
+                currentQuestionIndex = 0;
+                loadQuestion();
+                showQuizBtn.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
